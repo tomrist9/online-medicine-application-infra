@@ -1,0 +1,15 @@
+apiVersion: platform.confluent.io/v1beta1
+kind: Kafka
+metadata:
+  name: local-confluent-kafka
+  namespace: default
+spec:
+  replicas: 3
+  kafka:
+    image: confluentinc/cp-server:7.6.1
+    storage:
+      type: ephemeral
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.1
+    storage:
+      type: ephemeral

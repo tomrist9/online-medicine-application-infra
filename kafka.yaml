@@ -1,0 +1,15 @@
+apiVersion: platform.confluent.io/v1beta1
+kind: Kafka
+metadata:
+  name: local-confluent-kafka
+  namespace: default
+spec:
+  replicas: 1
+  image:
+    application: confluentinc/cp-server:7.6.1
+    init: confluentinc/confluent-init-container:2.8.0
+  dataVolumeCapacity: 1Gi
+  dependencies:
+    zookeeper:
+      endpoint: local-confluent-zk:2181
+
