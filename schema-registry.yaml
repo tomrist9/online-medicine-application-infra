@@ -10,5 +10,5 @@ spec:
     init: confluentinc/confluent-init-container:2.8.0
   dependencies:
     kafka:
-      bootstrapEndpoint: local-confluent-kafka-bootstrap:9092
+      bootstrapEndpoint: local-confluent-kafka:9092
 

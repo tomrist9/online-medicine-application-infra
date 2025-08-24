@@ -20,7 +20,7 @@ spec:
           image: tomrist9/order-service:1.0-SNAPSHOT
           env:
             - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://localhost:5432/host.docker.internal?currentSchema=orders&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
+              value: "jdbc:postgresql://postgres-service:5432/postgres?currentSchema=orders&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
             - name: KAFKA-CONFIG_BOOTSTRAP-SERVERS
               value: "local-confluent-kafka:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
@@ -73,7 +73,7 @@ spec:
           image: tomrist9/payment-service:1.0-SNAPSHOT
           env:
             - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://localhost:5432/host.docker.internal?currentSchema=payment&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
+              value: "jjdbc:postgresql://postgres-service:5432/postgres?currentSchema=payment&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
             - name: KAFKA-CONFIG_BOOTSTRAP-SERVERS
               value: "local-confluent-kafka:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
@@ -125,7 +125,7 @@ spec:
           image: tomrist9/pharmacy-service:1.0-SNAPSHOT
           env:
             - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://localhost:5432/host.docker.internal?currentSchema=pharmacy&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
+              value: "jdbc:postgresql://postgres-service:5432/postgres?currentSchema=pharmacy&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
             - name: KAFKA-CONFIG_BOOTSTRAP-SERVERS
               value: "local-confluent-kafka:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
@@ -177,7 +177,7 @@ spec:
           image: tomrist9/customer-service:1.0-SNAPSHOT
           env:
             - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://localhost:5432/host.docker.internal?currentSchema=customer&binaryTransfer=true&reWriteBatchedInserts=true"
+              value: "jdbc:postgresql://postgres-service:5432/postgres?currentSchema=customer&binaryTransfer=true&reWriteBatchedInserts=true"
             - name: KAFKA-CONFIG_BOOTSTRAP-SERVERS
               value: "local-confluent-kafka:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL

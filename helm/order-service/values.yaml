@@ -1,0 +1,27 @@
+replicaCount: 1
+
+image:
+  repository: tomrist9/order-service
+  tag: "1.0-SNAPSHOT"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8181
+
+env:
+  DB_HOST: "postgres"
+  DB_PORT: "5432"
+  DB_NAME: "orders"
+  DB_USER: "postgres"
+  DB_PASSWORD: "5554"
+  KAFKA_BOOTSTRAP_SERVERS: "local-confluent-kafka:9092"
+  KAFKA_SCHEMA_REGISTRY_URL: "http://local-confluent-schema-registry:8081"
+
+resources:
+  requests:
+    cpu: "200m"
+    memory: "256Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
