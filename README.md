@@ -18,9 +18,6 @@ Make sure you have:
 - [Helm](https://helm.sh/) v3+
 - [kubectl](https://kubernetes.io/docs/reference/kubectl/)
 
-## 🚀 Deployment Steps
-
-```bash
 # 1. Deploy Zookeeper & Kafka
 kubectl apply -f zookeeper.yaml
 kubectl apply -f kafka-cluster.yaml
@@ -40,15 +37,15 @@ kubectl apply -f application-deployment-local.yml
 
 
 # 📊 Tech Stack
-# - Kubernetes
-# - Helm
-# - Kafka & Zookeeper
-# - Postgres
-# - Schema Registry
+# Kubernetes
+# Helm
+# Kafka & Zookeeper
+# Postgres
+# Schema Registry
 
 # 📝 Notes
-# Update environment variables (DB credentials, Kafka bootstrap servers) 
-# as needed in the .yml files.
+# Update environment variables (DB credentials, Kafka bootstrap servers) as needed 
+# in the .yml files.
 # This repo only contains infrastructure configs.
 # The application source code can be found here:
 # https://github.com/tomrist9/online-medicine-application
