@@ -18,7 +18,7 @@ Make sure you have:
 - [Helm](https://helm.sh/) v3+
 - [kubectl](https://kubernetes.io/docs/reference/kubectl/)
 
-# 1. Deploy Zookeeper & Kafka
+## 1. Deploy Zookeeper & Kafka
 kubectl apply -f zookeeper.yaml
 kubectl apply -f kafka-cluster.yaml
 kubectl apply -f schema-registry.yaml
