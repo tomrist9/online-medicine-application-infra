@@ -43,6 +43,9 @@ For local testing, use:
 bash
 Copy code
 kubectl apply -f application-deployment-local.yml
+
+```bash
+
 📊 Tech Stack
 Kubernetes
 
