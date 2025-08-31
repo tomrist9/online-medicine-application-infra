@@ -49,3 +49,4 @@ kubectl apply -f application-deployment-local.yml
 # This repo only contains infrastructure configs.
 # The application source code can be found here:
 # https://github.com/tomrist9/online-medicine-application
+
