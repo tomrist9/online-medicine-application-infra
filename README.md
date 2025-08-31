@@ -23,25 +23,25 @@ kubectl apply -f zookeeper.yaml
 kubectl apply -f kafka-cluster.yaml
 kubectl apply -f schema-registry.yaml
 
-# 2. Deploy Postgres
+## 2. Deploy Postgres
 kubectl apply -f postgres-deployment.yml
 
-# 3. Deploy Order Service (via Helm)
+## 3. Deploy Order Service (via Helm)
 helm install order-service ./helm/order-service
 
-# 4. Create Kafka Topics
+## 4. Create Kafka Topics
 sh create-topics.sh
 
-# 🧪 Local Deployment (for local testing)
+## 🧪 Local Deployment (for local testing)
 kubectl apply -f application-deployment-local.yml
 
 
-# 📊 Tech Stack
-# Kubernetes
-# Helm
-# Kafka & Zookeeper
-# Postgres
-# Schema Registry
+## 📊 Tech Stack
+### Kubernetes
+### Helm
+### Kafka & Zookeeper
+### Postgres
+### Schema Registry
 
 # 📝 Notes
 # Update environment variables (DB credentials, Kafka bootstrap servers) as needed 
