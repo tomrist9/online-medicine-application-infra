@@ -1,0 +1,61 @@
+# Online Medicine Application - Infrastructure
+
+This repository contains the **infrastructure and deployment configuration** for the Online Medicine Application.  
+It includes Kubernetes manifests, Helm charts, and supporting scripts for running the microservices and dependencies.
+
+## 📂 Repository Structure
+- `helm/order-service/` – Helm chart for deploying the **Order Service**
+- `application-deployment-local.yml` – Local deployment configuration for testing
+- `postgres-deployment.yml` – Postgres database deployment
+- `kafka-cluster.yaml`, `zookeeper.yaml`, `schema-registry.yaml` – Kafka ecosystem setup
+- `kafka-client.yml` – Kafka client configuration
+- `create-topics.sh` – Script for creating Kafka topics
+
+## 🚀 Prerequisites
+Make sure you have:
+- [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)  
+- [Kubernetes](https://kubernetes.io/) cluster (local via Docker Desktop or Minikube, or remote)
+- [Helm](https://helm.sh/) v3+
+- [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+
+## ⚙️ Setup & Deployment
+
+### 1. Deploy Zookeeper & Kafka
+```bash
+kubectl apply -f zookeeper.yaml
+kubectl apply -f kafka-cluster.yaml
+kubectl apply -f schema-registry.yaml
+2. Deploy Postgres
+bash
+Copy code
+kubectl apply -f postgres-deployment.yml
+3. Deploy Order Service (via Helm)
+bash
+Copy code
+helm install order-service ./helm/order-service
+4. Create Kafka Topics
+bash
+Copy code
+sh create-topics.sh
+🧪 Local Deployment
+For local testing, use:
+
+bash
+Copy code
+kubectl apply -f application-deployment-local.yml
+📊 Tech Stack
+Kubernetes
+
+Helm
+
+Kafka & Zookeeper
+
+Postgres
+
+Schema Registry
+
+📝 Notes
+Update environment variables (DB credentials, Kafka bootstrap servers) as needed in the .yml files.
+
+This repo only contains infrastructure configs.
+The application source code can be found here: Online Medicine Application.
