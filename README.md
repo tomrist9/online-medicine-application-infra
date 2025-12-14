@@ -11,8 +11,8 @@ It includes Kubernetes manifests, Helm charts, and supporting scripts for runnin
 - `kafka-client.yml` – Kafka client configuration
 - `create-topics.sh` – Script for creating Kafka topics
 
-## 🚀 Prerequisites
-Make sure you have:
+##  Prerequisites
+
 - [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)  
 - [Kubernetes](https://kubernetes.io/) cluster (local via Docker Desktop or Minikube, or remote)
 - [Helm](https://helm.sh/) v3+
