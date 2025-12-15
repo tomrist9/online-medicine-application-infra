@@ -24,7 +24,7 @@ helm install order-service ./helm/order-service
 ## 4. Create Kafka Topics
 sh create-topics.sh
 
-## 🧪 Local Deployment (for local testing)
+##  Local Deployment (for local testing)
 kubectl apply -f application-deployment-local.yml
 
 
