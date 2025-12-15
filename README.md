@@ -3,14 +3,6 @@
 This repository contains the **infrastructure and deployment configuration** for the Online Medicine Application.  
 It includes Kubernetes manifests, Helm charts, and supporting scripts for running the microservices and dependencies.
 
-## 📂 Repository Structure
-- `helm/order-service/` – Helm chart for deploying the **Order Service**
-- `application-deployment-local.yml` – Local deployment configuration for testing
-- `postgres-deployment.yml` – Postgres database deployment
-- `kafka-cluster.yaml`, `zookeeper.yaml`, `schema-registry.yaml` – Kafka ecosystem setup
-- `kafka-client.yml` – Kafka client configuration
-- `create-topics.sh` – Script for creating Kafka topics
-
 ##  Prerequisites
 
 - [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)  
