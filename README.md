@@ -28,7 +28,7 @@ sh create-topics.sh
 kubectl apply -f application-deployment-local.yml
 
 
-## 📊 Tech Stack
+##  Tech Stack
 ### Kubernetes
 ### Helm
 ### Kafka & Zookeeper
